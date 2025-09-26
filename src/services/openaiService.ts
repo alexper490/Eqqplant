@@ -104,7 +104,7 @@ Respond in JSON format:
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-5-mini",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: `Conversation history:\n${conversationContext}\n\nUser's latest message: ${userMessage}` }

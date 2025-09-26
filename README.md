@@ -65,7 +65,7 @@ The AI evaluates responses against 4 key pillars:
 ## Technology Stack
 
 - **Frontend**: React + TypeScript + Vite
-- **AI**: OpenAI GPT-4 API
+- **AI**: OpenAI GPT-5 Mini API
 - **Styling**: CSS with smooth animations
 - **Icons**: Lucide React
 
