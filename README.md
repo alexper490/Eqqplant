@@ -2,6 +2,10 @@
 
 A React application that helps users develop emotional intelligence through guided reflection using Gibbs' Reflective Cycle, visualized through a growing plant.
 
+## 🌱 Live Demo
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/eqqplant)
+
 ## Features
 
 - **Personalized Onboarding**: Users input their name and Myers-Briggs personality type
@@ -72,7 +76,9 @@ src/
 ├── components/
 │   ├── OnboardingForm.tsx
 │   ├── ChatInterface.tsx
-│   └── PlantVisualization.tsx
+│   ├── PlantVisualization.tsx
+│   ├── AboutLogic.tsx
+│   └── AboutProgram.tsx
 ├── services/
 │   └── openaiService.ts
 ├── types.ts
@@ -87,3 +93,11 @@ src/
 - Plant stages advance when users demonstrate all 4 pillars of emotional growth
 - Conversations are designed to be 5-10 minutes long
 - The AI maintains context of the user's Myers-Briggs type throughout the conversation
+
+## Contributing
+
+This is a research project focused on emotional intelligence development through AI-guided reflection. Contributions and feedback are welcome!
+
+## License
+
+MIT License - feel free to use this project for educational and research purposes.
