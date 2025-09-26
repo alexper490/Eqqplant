@@ -33,7 +33,7 @@ const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) => {
         <div className="welcome-header">
           <h1>🌱 Welcome to Eqqplant</h1>
           <p>Your journey to emotional intelligence growth begins here</p>
-          <p className="model-note">using gpt-5-mini</p>
+          <p className="model-note">using gpt-4o-mini</p>
         </div>
         
         <form onSubmit={handleSubmit} className="onboarding-form">
