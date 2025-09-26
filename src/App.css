@@ -33,6 +33,13 @@
   font-size: 1.1rem;
 }
 
+.model-note {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
 .onboarding-form {
   display: flex;
   flex-direction: column;
