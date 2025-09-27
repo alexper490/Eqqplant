@@ -61,14 +61,20 @@ EQ Evaluation (be reasonable):
 
 Advance when user demonstrates they're using their brain and thinking about the situation.
 
-COMPLETION:
-ONLY set shouldComplete to true when user reaches Action Plan stage AND provides a genuine, applicable action plan. This should only happen at the very end of the full Gibbs cycle.
+COMPLETION RULES:
+- shouldComplete should ONLY be true when:
+  1. User is in "actionPlan" stage (the final stage)
+  2. User provides a genuine, applicable action plan with specific strategies
+  3. The action plan shows they've learned something and have concrete steps
+- NEVER set shouldComplete to true in any other stage (description, feelings, evaluation, analysis, conclusion)
+- If user is not in actionPlan stage, shouldComplete must be false
+- If user is in actionPlan stage but hasn't provided a proper action plan yet, shouldComplete must be false
 
 Respond in JSON format:
 {
   "response": "Your concise, caring response (2-3 sentences max)",
   "shouldAdvanceStage": boolean,
-  "shouldComplete": boolean,
+  "shouldComplete": boolean (ONLY true if in actionPlan stage with proper action plan),
   "gibbsStage": "description" | "feelings" | "evaluation" | "analysis" | "conclusion" | "actionPlan",
   "eqEvaluation": {
     "selfAwareness": boolean,
@@ -77,7 +83,9 @@ Respond in JSON format:
     "eqDimension": boolean,
     "overallScore": number (0-4)
   }
-}`
+}
+
+CRITICAL: shouldComplete must be false unless user is in actionPlan stage AND has provided a genuine action plan.`
 
   const conversationContext = conversationHistory
     .slice(-10) // Keep last 10 messages for context
